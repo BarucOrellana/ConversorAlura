@@ -32,19 +32,30 @@ public class Principal {
 					double valorRecibido = Double.parseDouble(input);
 					conversionA.ConvertirMonedas(valorRecibido);
 					
-				case "Mexico":
+					int respuesta = JOptionPane.showConfirmDialog(null, "¿Desea realizar otra Conversión?");
+					if(JOptionPane.OK_OPTION == respuesta) {
+						System.out.println("Entra");
+					} else {
+						JOptionPane.showMessageDialog(null, "Programa finalizado");
+					}
+					break;
+					
+				case "México":
 					String inputm = JOptionPane.showInputDialog(null, "Ingrese el valor a convertir");
 					double valorRecibidom = Double.parseDouble(inputm);
 					conversionM.ConvertirMonedas(valorRecibidom);
-				}
+					
+					int respuestam = JOptionPane.showConfirmDialog(null, "¿Desea realizar otra Conversión?");
+					if(JOptionPane.OK_OPTION == respuestam) {
+						System.out.println("Entra");
+					} else {
+						JOptionPane.showMessageDialog(null, "Programa finalizado");
+					}
+					break;
+					
+
+				}break;
 				
-				int respuesta = JOptionPane.showConfirmDialog(null, "¿Desea realizar otra Conversión?");
-				if(JOptionPane.OK_OPTION == respuesta) {
-					System.out.println("Entra");
-				} else {
-					JOptionPane.showMessageDialog(null, "Programa finalizado");
-				}
-				break;
 				
 			case "Conversor de Temperatura":
 				String input1 = JOptionPane.showInputDialog(null, "Ingrese el valor a convertir");
