@@ -2,7 +2,8 @@ package Principal;
 
 import javax.swing.*;
 
-import ConversorMonedas.OpcionesConversion;
+import ConversorMonedas.OpcionesConversionArgentina;
+import ConversorMonedas.OpcionesConversionMexico;
 import ConversorTemperatura.OpcionesConversionTemperatura;
 
 
@@ -10,7 +11,8 @@ public class Principal {
 
 	public static void main(String[] args) {
 		
-		OpcionesConversion conversion = new OpcionesConversion();
+		OpcionesConversionArgentina conversionA = new OpcionesConversionArgentina();
+		OpcionesConversionMexico conversionM = new OpcionesConversionMexico();
 		OpcionesConversionTemperatura conversionT = new OpcionesConversionTemperatura();
 		
 		while(true) {
@@ -20,9 +22,16 @@ public class Principal {
 			
 			switch(opciones) {
 			case "Conversor de Monedas":
+				
+				String pais = JOptionPane.showInputDialog(null, "Seleccione un país", "Menú", JOptionPane.PLAIN_MESSAGE, null, 
+						new Object[] {"México", "Argentina"}, "Elegir").toString();
+				
+				if (pais = Argentina) {
 				String input = JOptionPane.showInputDialog(null, "Ingrese el valor a convertir");
 				double valorRecibido = Double.parseDouble(input);
-				conversion.ConvertirMonedas(valorRecibido);
+				conversionA.ConvertirMonedas(valorRecibido);
+				}
+				
 				
 				
 				int respuesta = JOptionPane.showConfirmDialog(null, "¿Desea realizar otra Conversión?");
