@@ -26,13 +26,17 @@ public class Principal {
 				String pais = JOptionPane.showInputDialog(null, "Seleccione un país", "Menú", JOptionPane.PLAIN_MESSAGE, null, 
 						new Object[] {"México", "Argentina"}, "Elegir").toString();
 				
-				if (pais = Argentina) {
-				String input = JOptionPane.showInputDialog(null, "Ingrese el valor a convertir");
-				double valorRecibido = Double.parseDouble(input);
-				conversionA.ConvertirMonedas(valorRecibido);
+				switch (pais) {
+				case "Argentina":
+					String input = JOptionPane.showInputDialog(null, "Ingrese el valor a convertir");
+					double valorRecibido = Double.parseDouble(input);
+					conversionA.ConvertirMonedas(valorRecibido);
+					
+				case "Mexico":
+					String inputm = JOptionPane.showInputDialog(null, "Ingrese el valor a convertir");
+					double valorRecibidom = Double.parseDouble(inputm);
+					conversionM.ConvertirMonedas(valorRecibidom);
 				}
-				
-				
 				
 				int respuesta = JOptionPane.showConfirmDialog(null, "¿Desea realizar otra Conversión?");
 				if(JOptionPane.OK_OPTION == respuesta) {

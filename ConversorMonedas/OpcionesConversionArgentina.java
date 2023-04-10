@@ -2,9 +2,9 @@ package ConversorMonedas;
 
 import javax.swing.JOptionPane;
 
-public class OpcionesConversion {
+public class OpcionesConversionArgentina {
 	
-	ConvertirMonedas monedas = new ConvertirMonedas();
+	ConvertirMonedasArgentina monedas = new ConvertirMonedasArgentina();
 	
 	public void ConvertirMonedas(double valor) {
 	
